@@ -2,11 +2,11 @@
 
 ## Índice :pushpin:
 
-* [Descrição](#descrição)
-* [Tecnologias utilizadas](#tecnologias-utilizadas)
-* [Desenvolvedores](#desenvolvedores)
-* [Professor](#professor)
-* [Extra](#extra)
+* [Descrição](#descrição-books)
+* [Tecnologias utilizadas](#tecnologias-utilizadas-computer)
+* [Desenvolvedores](#desenvolvedores-construction_worker)
+* [Professor](#professor-raising_hand)
+* [Extra](#extra-mag_right)
 
 
 ## Descrição :books:
