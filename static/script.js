@@ -34,13 +34,11 @@ function card_selected(){
             if (type == all_types[0].id.toLowerCase()){
                 buttons[0].classList.add("disabled")
                 buttons[1].setAttribute("hidden", "")
-                console.log(0)
 
             } else if (type==all_types[all_types.length-1].id.toLowerCase()) {
                 buttons[2].setAttribute("hidden", "")
             } else {
                 buttons[1].setAttribute("hidden", "")
-                console.log(2)
             }
             
     }
@@ -80,51 +78,22 @@ function get_items_selected(){
             "nome":null,
             "n_pessoas": null
         },
-        "carnes": [],
-        "bebidas": []
     }
 
-    let carnes = document.querySelector("#carnes").children
-    let carnes_array = Array.from(carnes)
-    carnes_array.forEach(e=> {
-        if(e.classList.contains("active")){
-          items_selected["carnes"].push(e.textContent)  
-        }
+    let cards = document.querySelectorAll(".card")
+    cards = Array.from(cards).slice(1, cards.length);
+
+    cards.forEach(card=>{
+    list_tmp = [];
+
+    card.querySelectorAll(".active span").forEach(el2 =>  list_tmp.push(el2.textContent))
+    items_selected[card.id.replace("card-", "")] = list_tmp
     })
 
-    let bebidas = document.querySelector("#bebidas").children
-    let bebidas_array = Array.from(bebidas)
-    bebidas_array.forEach(e=> {
-        if(e.classList.contains("active")){
-          items_selected["bebidas"].push(e.textContent)  
-        }
-    })
+    console.log(items_selected)
+   }
 
 
-    if (document.querySelector("#name_client").value == ""){
-        alert("o nome cliente está vazio")
-        return (null)
-    }
-
-    if (items_selected["carnes"].length == 0 ){
-        alert("Nenhuma carne selecionada")
-        return (null)
-
-    }
-
-    
-    if (items_selected["bebidas"].length == 0){
-        alert("Nenhuma bebida selecionada")
-        return (null)
-
-    }
-
-    items_selected["geral"]["nome"] = document.querySelector("#name_client").value
-    items_selected["geral"]["n_pessoas"] = document.querySelector("#n_clients").value
-
-    //enviarDados(items_selected)
-    return(items_selected)
-}
 
 function enviarDados(data) {
     fetch('http://localhost:5000/receber_dados', {
@@ -142,10 +111,3 @@ function enviarDados(data) {
         console.error('Error:', error);
     });
 }
-
-function select_first_card(){
-    document.querySelector("#card-geral")
-}
-
-
-card_selected()

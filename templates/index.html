@@ -8,10 +8,11 @@
         <input checked class="btn-check" id="btnradiogeral" name="btnradio" onclick="card_selected()" type="radio">
         <label class="btn btn-outline-secondary" for="btnradiogeral">geral</label>
         {% for key in df_dict.keys() %}
-        <input checked class="btn-check" id="btnradio{{key}}" name="btnradio" onclick="card_selected()" type="radio">
+        <input class="btn-check" id="btnradio{{key}}" name="btnradio" onclick="card_selected()" type="radio">
         <label class="btn btn-outline-secondary" for="btnradio{{key}}">{{key}}</label>
         {% endfor %}
     </div>
+
 
     <div class="container">
 
@@ -25,8 +26,9 @@
                     </div>
                     <div class="row">
                         <label class="form-label" for="n_clients">Quantidade de pessoas</label>
-                        <span id="rangeValue">5</span>
-                        <input class="form-range" id="n_clients" name="n_clients" oninput="update_value_range(this)" type="range">
+                        <span id="rangeValue">50</span>
+                        <input class="form-range" id="n_clients" name="n_clients" oninput="update_value_range(this)"
+                               type="range">
                     </div>
                 </div>
                 {% include "pieces/buttons_controler.html" %}
@@ -38,16 +40,20 @@
         <!-- inicio cartao {{key}} -->
         <div class="card text-center" hidden id="card-{{key}}">
             <div class="card-body">
-                <div class="card-text" id="{{key}}"  options>
-                    {% for nome in df["nome"].to_list() %}
-                    <button class="btn col-4 my-1" onclick="selected(this)">{{nome}}</button>
+                <div class="card-text" id="{{key}}" options>
+                    {% for _, row in df.iterrows() %}
+
+                    <button class="btn col-4 my-1" onclick="selected(this)">
+                        <img src="{{row['url_imagem']}}" width="30px" height="30px"> <span>{{row["nome"]}}</span>
+
+                    </button>
                     {% endfor %}
                 </div>
                 {% include "pieces/buttons_controler.html" %}
             </div>
         </div>
         <!-- fim cartao {{key}} -->
-         {% endfor %}
+        {% endfor %}
     </div>
 </main>
 

@@ -1,13 +1,12 @@
 from flask import Flask, request, render_template, flash
 from py_scripts.utilidade import get_and_clean_df
-from py_scripts.SQL import atualizar
+from py_scripts.SQL import  atualizar
+
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "churraspysecret"
 
 atualizar()
-
-    
 
 @app.route("/", methods = ["GET","POST"])
 def index():
