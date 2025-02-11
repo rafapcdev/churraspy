@@ -86,7 +86,7 @@ function get_items_selected(){
     cards.forEach(card=>{
     list_tmp = [];
 
-    card.querySelectorAll(".active").forEach(el2 =>  list_tmp.push(el2.textContent))
+    card.querySelectorAll(".active span").forEach(el2 =>  list_tmp.push(el2.textContent))
     items_selected[card.id.replace("card-", "")] = list_tmp
     })
 

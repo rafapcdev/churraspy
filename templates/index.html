@@ -44,8 +44,8 @@
                     {% for _, row in df.iterrows() %}
 
                     <button class="btn col-4 my-1" onclick="selected(this)">
-                        <img src="{{row['url_imagem']}}" width="30px" height="30px">
-                        {{row["nome"]}}
+                        <img src="{{row['url_imagem']}}" width="30px" height="30px"> <span>{{row["nome"]}}</span>
+
                     </button>
                     {% endfor %}
                 </div>
