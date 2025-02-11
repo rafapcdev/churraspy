@@ -52,8 +52,8 @@
 
 ### Back-End :wrench:
 
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/matheus-costa-dev" width=115><br><sub>Matheus Pereira Costa</sub>](https://github.com/matheus-costa-dev) | [<img loading="lazy" src="https://avatars.githubusercontent.com/matheus-costa-dev" width=115><br><sub>Matheus Pereira Costa</sub>](https://github.com/matheus-costa-dev) 
-| :---: | :---: | 
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/matheus-costa-dev" width=115><br><sub>Matheus Pereira Costa</sub>](https://github.com/matheus-costa-dev) | [<img loading="lazy" src="https://avatars.githubusercontent.com/hugokoppe" width=115><br><sub>Hugo Koppe</sub>](https://github.com/hugokoppe) | [<img loading="lazy" src="https://avatars.githubusercontent.com/davisalvaya" width=115><br><sub>Davi salvaya</sub>](https://github.com/davisalvaya) 
+| :---: | :---: | :---: | 
 
 ### Front-End :art:
 
