@@ -91,23 +91,23 @@ function get_items_selected(){
     })
 
     console.log(items_selected)
-   }
-
+    enviarDados(items_selected)
+}
 
 
 function enviarDados(data) {
-    fetch('http://localhost:5000/receber_dados', {
+    fetch('http://localhost:5000/calcular', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
+        credentials: 'include',  // Garante que cookies são enviados
+        mode: 'cors',  // Garante que a requisição respeite CORS
         body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(result => {
-        console.log('Success:', result);
+    .then(res => res.json())
+    .then(res => {
+        window.location.href = res.url
     })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+    .catch(error => console.error('Error:', error));
 }
