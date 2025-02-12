@@ -1,4 +1,4 @@
-from py_scripts.SQL import carnes_bovinas, aves, churrasco_e_cia, frios, refrigerante, cervejas
+from SQL import carnes_bovinas, aves, churrasco_e_cia, frios, refrigerante, cervejas
 from pandas import concat
 from pandas.errors import SettingWithCopyWarning
 from warnings import filterwarnings

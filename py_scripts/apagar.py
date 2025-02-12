@@ -1,0 +1,3 @@
+from utilidade import get_and_clean_df
+
+pedido = {'geral': {'n_pessoas': '50'}, 'Bovinos': ['Alcatra com Maminha Peça Inteira', 'Picanha Bovina Maturatta Peca Inteira'], 'Aves': [], 'Guarnições': ['Linguiça de Frango Seara kg', 'Linguiça Lombo c/Alho e Ervas Premium Aurora 500g'], 'Bebidas': ['Refrigerante Flexa Pet 2Lt Uva', 'Refrigerante Flexa Pet 2Lt Laranja', 'Água Mineral Natural Minalba 510ml'], 'Cervejas': ['Cerveja Orange Sunshine Hocus Pocus 500ml', 'Cerveja Caymmi Pilsner BackBone Grf 600ml']}

@@ -152,3 +152,4 @@ def agua():
     agu_df = read_sql("SELECT * FROM Produtos WHERE tipo = 'Águas' AND data_extracao = strftime('%d/%m/%Y', DATE('now', 'localtime'));", conn)
     aguinha = agu_df
     return aguinha
+
