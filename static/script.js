@@ -75,8 +75,7 @@ function update_value_range(element){
 function get_items_selected(){
     items_selected = {
         "geral": {
-            "nome":null,
-            "n_pessoas": null
+            "n_pessoas": document.querySelector("#n_clients").value
         },
     }
 
@@ -111,3 +110,5 @@ function enviarDados(data) {
     })
     .catch(error => console.error('Error:', error));
 }
+
+card_selected()

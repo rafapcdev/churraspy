@@ -19,6 +19,10 @@ def tabela_hoje():
     df = read_sql("select * from Produtos where data_extracao = strftime('%d/%m/%Y', DATE('now', 'localtime')) ", conn)
     return df
 
+def deletar_hoje():
+    conn = connect('Churrasquin.db')
+    df_sql = read_sql("select * from Produtos", conn)
+
 def atualizar():
     conn = connect('Churrasquin.db')
     df_sql = read_sql("select * from Produtos", conn)

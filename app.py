@@ -30,7 +30,7 @@ class UserData(db.Model):
 # Rotas
 @app.route("/", methods=["GET"])
 def index():
-    df_dict = get_and_clean_df()
+    df_dict = get_and_clean_df(preco_Final_str=True)
     return render_template("index.html", df_dict=df_dict)
 
 @app.route("/resultado", methods=["GET"])
@@ -40,6 +40,7 @@ def resultado():
 
     if user_data:
         print("Acessando página resultado")
+        print(user_data.data)
         return render_template("resultado.html", data=user_data.data)
     
     return redirect(url_for("index"))
@@ -55,6 +56,7 @@ def calcular():
         db.session.add(user_data)
 
     user_data.data = request.get_json()
+    print(user_data.data)
     db.session.commit()  # Salva as alterações no banco de dados
     print(f"Dados atualizados: {user_data}")  # Debug
 
