@@ -48,7 +48,7 @@ function card_selected(){
 
 function next_previous(forward = true){
     let i = 0;
-    btn_checks = document.querySelectorAll(".btn-group .btn-check")
+    btn_checks = document.querySelectorAll(".btn-check")
 
     for (let e of btn_checks) {
         if (e.checked) {
