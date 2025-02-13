@@ -41,7 +41,6 @@ def resultado():
     user_data = UserData.query.filter_by(user_id=user_id).first()
 
     if user_data:
-        print("Acessando página resultado")
         data = calculo_churrasco(user_data.data)
    
 
@@ -61,9 +60,7 @@ def calcular():
         db.session.add(user_data)
 
     user_data.data = request.get_json()
-    print(user_data.data)
     db.session.commit()  # Salva as alterações no banco de dados
-    print(f"Dados atualizados: {user_data}")  # Debug
 
     return jsonify({"url": url_for("resultado")})
 
@@ -71,4 +68,4 @@ if __name__ == "__main__":
     atualizar()
     with app.app_context():
         db.create_all()  # Cria as tabelas no banco de dados
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port=8080)
