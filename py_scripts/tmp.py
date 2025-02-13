@@ -1,7 +1,8 @@
-from py_scripts.utilidade import get_and_clean_df
+from py_scripts.calculo_churras import calculo_churrasco  
 
+pedidos = {'geral': {'n_pessoas': '50'}, 'Bovinos': ['Alcatra com Maminha Peça Inteira kg', 'Bife Ancho Bovino Porcionado kg', 
+'Contra File Bovino Peca Inteira kg'], 'Aves': ['Asa de Frango Cong kg', 'Coração de Frango kg', 'Coração de Frango Perdigão Pct 1kg'], 'Guarnições': ['Linguiça de Frango Aurora kg', 'Linguiça de Frango Seara kg', 'Linguiça Lombo c/Alho e Ervas Premium Aurora 500g', 'Linguiça Suína Aurora kg', 'Linguica Suina Fininha Apimentada Premium Aurora 600g', 'Linguiça Suína Perdigão kg', 'Linguica Toscana com Queijo Na Brasa Perdigão 600g', 'Queijo Coalho Espeto Regina kg', 'Queijo Coalho Espeto Sertanorte Orégano kg'], 'Refrigerantes': ['Refrigerante Laranja Sukita Pet 200ml', 'Refrigerante Flexa Pet 2Lt Uva', 'Refrigerante Flexa Pet 2Lt Limao', 'Refrigerante Flexa Pet 2Lt Laranja', 'Água Mineral Gasosa Minalba 1500ml', 'Água Mineral Gasosa Minalba 510ml', 'Água Mineral Gasosa São Lourenço 510ml', 'Bebida Baixa Caloria H2OH!  1500ml Limao', 'Bebida Baixa Caloria H2OH!  500ml Limão', 'Bebida Isotônica Gatorade Grf 500ml Laranja', 'Bebida Isotônica Gatorade Grf 500ml Limao'], 'Cervejas': ['Cerveja Pilsen Extra Corona Latao 473ml', 'Cerveja Orange Sunshine Hocus Pocus 500ml', 'Cerveja Magic Trap Hocus Pocus 500ml', 'Cerveja Lager Premium Puro Malte Amstel  Garrafa 355ml', 'Cerveja Caymmi Pilsner BackBone Grf 600ml', 'Cerveja Belgian Witbier BackBone Grf 600ml']}
 
-df_dict = get_and_clean_df()
-
-for key in df_dict.keys():
-   df_dict[key]["preco_final"] = df_dict[key]["preco_final"].apply(lambda row: str(row).replace(".",","))
+data = calculo_churrasco(pedidos)
+for i, row in data["Bovinos"]["df"].iterrows():
+    print(row["nome"])

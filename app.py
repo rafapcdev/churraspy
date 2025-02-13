@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS  # Importe o CORS
 from datetime import datetime
 from py_scripts.utilidade import get_and_clean_df
+from py_scripts.calculo_churras import calculo_churrasco
 
 # Inicialização do Flask
 app = Flask(__name__)
@@ -30,7 +31,7 @@ class UserData(db.Model):
 # Rotas
 @app.route("/", methods=["GET"])
 def index():
-    df_dict = get_and_clean_df()
+    df_dict = get_and_clean_df(preco_Final_str=True)
     return render_template("index.html", df_dict=df_dict)
 
 @app.route("/resultado", methods=["GET"])
@@ -40,7 +41,11 @@ def resultado():
 
     if user_data:
         print("Acessando página resultado")
-        return render_template("resultado.html", data=user_data.data)
+        data = calculo_churrasco(user_data.data)
+   
+
+        if data["Bovinos"] or data["Aves"] or data["Guarnições"] or data["Refrigerantes"] or data["Cervejas"]:
+            return render_template("resultado.html", data=data)
     
     return redirect(url_for("index"))
 
@@ -55,6 +60,7 @@ def calcular():
         db.session.add(user_data)
 
     user_data.data = request.get_json()
+    print(user_data.data)
     db.session.commit()  # Salva as alterações no banco de dados
     print(f"Dados atualizados: {user_data}")  # Debug
 

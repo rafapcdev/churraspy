@@ -6,9 +6,72 @@
     <div class="container">
         <div class="card text-center text-light" id="card-geral">
             <div class="card-body custom-color">
-                {{data}}
+                <h2>Total: R$ {{ "{:.2f}".format(data["preco_final"]).replace(".", ",") }}</h2>
+                <h3>Detalhamento por grupo </h3>
+
+                <table class="table">
+                    <thead>
+                        <th scope="col">index</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Qtd carvao</th>
+                        <th scope="col">Preço unitário</th>
+                        <th scope="col">Preço Total</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Carvao</td>
+                            <td>{{data["qtd_carvao"]}}</td>
+                            <td>12</td>
+                            <td>{{data["preco_carvao"]}}</td>
+                        </tr>  
+                    </tbody>
+
+                </table>
+
+                {% for key in data.keys() %}
+
+                    {% if not key in ("preco_carvao","qtd_carvao", "preco_final") %}
+                     {% if data[key]%}
+                    
+                        <div>
+                            <h3>{{key}}</h3>
+                            <table class="table">
+                                <thead>
+
+                                    <th scope="col">index</th>
+                                    <th scope="col">Produto</th>
+                                    <th scope="col">Preço</th>
+                                    <th scope="col">Qtd</th>
+                                    <th scope="col">Preço total por produto</th>
+ 
+                                </thead>
+                                <tbody>
+                                    {% for i, row in data[key]["df"].iterrows() %}
+                                    <tr>
+                                        <th scope="row">{{i + 1 }}</th>
+   
+                                        <td>{{row["nome"]}}</td>
+                                        <td>{{row["preco"]}}</td>
+                                        <td>{{row["qtd_comprar"]}}</td>
+                                        <td>{{row["preco_final"]}}</td>
+             
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        {% endif %}
+                    {% endif %}
+                    <br>
+                    <br>
+                {% endfor %}
             </div>
         </div>
     </div>
 </main>
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static', filename = 'script_resultado.js')}}"></script>
 {% endblock %}
