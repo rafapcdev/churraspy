@@ -68,4 +68,4 @@ if __name__ == "__main__":
     atualizar()
     with app.app_context():
         db.create_all()  # Cria as tabelas no banco de dados
-    app.run(host="0.0.0.0",port=8080)
+    app.run(debug=False)

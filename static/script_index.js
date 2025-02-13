@@ -15,7 +15,7 @@ function selected(element){
 }
 
 function card_selected(){
-    let radios = document.querySelectorAll(".btn-group [name='btnradio']")
+    let radios = document.querySelectorAll("[name='btnradio']")
 
     document.querySelectorAll(".card").forEach(el=>{
         el.setAttribute("hidden","")

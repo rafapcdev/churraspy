@@ -3,21 +3,26 @@
 {% block title %} ChurrasPY {% endblock %}
 {% block main %}
 
-<main class="d-flex flex-column justify-content-center m-0 p-0 ">
+<main class="d-flex flex-column justify-content-center m-0 p-0">
     {% include "pieces/button_calcular_separate.html" %}
-        
-    <div class="container btn-group text-center align-items-center bg-custom p-0" role="group">
-        <input checked class="btn-check" id="btnradiogeral" name="btnradio" onclick="card_selected()" type="radio">
-        <label class="btn btn-outline-secondary" for="btnradiogeral">geral</label>
-        {% for key in df_dict.keys() %}
-        <input class="btn-check" id="btnradio{{key}}" name="btnradio" onclick="card_selected()" type="radio">
-        <label class="btn btn-outline-secondary" for="btnradio{{key}}">{{key}}</label>
-        {% endfor %}
+    
+    <div class="container text-center bg-custom p-0">
+        <div class="row g-2">
+            <div class="col-12 col-md-4 col-lg-2">
+                <input checked class="btn-check" id="btnradiogeral" name="btnradio" onclick="card_selected()" type="radio">
+                <label class="btn btn-outline-secondary w-100" for="btnradiogeral">geral</label>
+            </div>
+            {% for key in df_dict.keys() %}
+            <div class="col-12 col-md-4 col-lg-2">
+                <input class="btn-check" id="btnradio{{key}}" name="btnradio" onclick="card_selected()" type="radio">
+                <label class="btn btn-outline-secondary w-100" for="btnradio{{key}}">{{key}}</label>
+            </div>
+            {% endfor %}
+        </div>
     </div>
+    
 
-
-    <div class="container">
-
+    <div class="container mt-3">
         <!-- inicio cartao geral-->
         <div class="card text-center text-light" id="card-geral">
             <div class="card-body custom-color">
@@ -25,8 +30,7 @@
                     <div class="row">
                         <label class="form-label" for="n_clients">Quantidade de pessoas</label>
                         <span id="rangeValue">50</span>
-                        <input class="form-range" id="n_clients" name="n_clients" oninput="update_value_range(this)"
-                               type="range">
+                        <input class="form-range" id="n_clients" name="n_clients" oninput="update_value_range(this)" type="range">
                     </div>
                 </div>
                 {% include "pieces/buttons_controler.html" %}
@@ -36,17 +40,17 @@
 
         {% for key, df in df_dict.items() %}
         <!-- inicio cartao {{key}} -->
-        <div class="card text-center" hidden id="card-{{key}}">
+        <div class="card text-center mt-3" hidden id="card-{{key}}">
             <div class="card-body">
-                <div class="card-text" id="{{key}}" options>
+                <div class="card-text row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2" id="{{key}}" options>
                     {% for _, row in df.iterrows() %}
-
-                    <button class="btn col-4 my-1" onclick="selected(this)">
-                        <img src="{{row['url_imagem']}}" width="30px" height="30px"> 
-                        <span>{{row["nome"]}}</span> 
-                        <p>R$ {{row["preco_final"]}}</p>
-
-                    </button>
+                    <div class="col">
+                        <button class="btn w-100 d-flex flex-column align-items-center" onclick="selected(this)">
+                            <img src="{{row['url_imagem']}}" class="img-fluid mb-2" width="30px" height="30px"> 
+                            <span>{{row["nome"]}}</span> 
+                            <p>R$ {{row["preco_final"]}}</p>
+                        </button>
+                    </div>
                     {% endfor %}
                 </div>
                 {% include "pieces/buttons_controler.html" %}
@@ -59,6 +63,6 @@
 
 {% endblock %}
 
-{% block script %} 
-<script src="{{ url_for('static', filename = 'script_index.js')}}"></script>
+{% block script %}
+<script src="{{ url_for('static', filename='script_index.js') }}"></script>
 {% endblock %}
