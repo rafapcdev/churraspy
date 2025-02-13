@@ -57,12 +57,12 @@ function next_previous(forward = true){
         i++;
     }
     
-    
+
     if (forward){
 
-        document.querySelectorAll(".btn-group input")[i+1].checked = true;
+        document.querySelectorAll("[name='btnradio']")[i+1].checked = true;
     }else {
-        document.querySelectorAll(".btn-group input")[i-1].checked = true;
+        document.querySelectorAll("[name='btnradio']")[i-1].checked = true;
     }
 
     card_selected()
