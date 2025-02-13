@@ -95,7 +95,7 @@ function get_items_selected(){
 
 
 function enviarDados(data) {
-    fetch('http://localhost:5000/calcular', {
+    fetch(window.location.href +'calcular', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
