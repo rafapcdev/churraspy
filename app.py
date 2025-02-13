@@ -4,6 +4,7 @@ from flask_cors import CORS  # Importe o CORS
 from datetime import datetime
 from py_scripts.utilidade import get_and_clean_df
 from py_scripts.calculo_churras import calculo_churrasco
+from py_scripts.SQL import atualizar
 
 # Inicialização do Flask
 app = Flask(__name__)
@@ -66,8 +67,8 @@ def calcular():
 
     return jsonify({"url": url_for("resultado")})
 
-# Inicialização do Banco de Dados e Execução do App
 if __name__ == "__main__":
+    atualizar()
     with app.app_context():
         db.create_all()  # Cria as tabelas no banco de dados
     app.run(debug=True)

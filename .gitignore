@@ -1,4 +1,4 @@
 /env
 py_scripts/__pycache__/
 py_scripts/apagar.py
-py_scripts/tmp.py
+tmp.py
