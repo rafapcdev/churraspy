@@ -10,7 +10,7 @@ from py_scripts.SQL import atualizar
 app = Flask(__name__)
 
 # Configuração do CORS
-CORS(app, supports_credentials=True, origins=["http://localhost:5000", "http://127.0.0.1:5000"])
+CORS(app, supports_credentials=True, origins=["http://localhost:5000", "http://127.0.0.1:5000", "https://matheuspc.pythonanywhere.com/"])
 
 # Configuração do banco de dados SQLite
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///app.db"
@@ -65,7 +65,6 @@ def calcular():
     return jsonify({"url": url_for("resultado")})
 
 if __name__ == "__main__":
-    atualizar()
     with app.app_context():
         db.create_all()  # Cria as tabelas no banco de dados
     app.run(debug=False)

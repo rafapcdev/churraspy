@@ -37,9 +37,6 @@ main {
     border: solid 1px;
 }
 
-.card-text .btn, #geral {
-    font-size: small;
-}
 
 .card {
     background-color: rgba(0, 0, 0, .5);
