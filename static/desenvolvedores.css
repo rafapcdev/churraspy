@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+/* Estilizando o link */
+.Linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0c0303; /* Cor do Linkedin */
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 5px 10px;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+}
+
+/* Estilizando o ícone */
+.Linkedin-link i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 20px;
+}
+
+/* Efeito de hover */
+.Linkedin-link:hover {
+    color: #0099ff; /* Cor mais vibrante ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho um pouco */
+    border-color: #000000;
+}
+
+/* Opções adicionais para links em membros */
+.member a {
+    margin-top: 10px;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+  
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Suaviza a animação de aumento */
+}
+
+.member img:hover {
+    transform: scale(1.2); /* Aumenta a imagem em 20% quando o mouse passa sobre ela */
+}
+
+.churras {
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    text-shadow: 10px 5px 8px rgba(0, 0, 0, 0.9);
+}
+
+.background {
+    position: fixed; /* Faz com que o fundo fique fixo durante o scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagens/giphy.gif'); /* Caminho do GIF */
+    background-size: cover; /* Faz o GIF cobrir toda a área */
+    background-position: center; /* Centraliza o GIF */
+    z-index: -1; /* Garante que o fundo fique atrás do conteúdo */
+}
+
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    padding: 50px 20px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.member h2 {
+    margin: 10px 0 5px;
+}
+
+.member p {
+    margin: 0;
+}
