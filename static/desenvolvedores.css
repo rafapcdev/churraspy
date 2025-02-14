@@ -72,7 +72,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('imagens/giphy.gif'); /* Caminho do GIF */
+    background-image: url('imgs/giphy.gif'); /* Caminho do GIF */
     background-size: cover; /* Faz o GIF cobrir toda a área */
     background-position: center; /* Centraliza o GIF */
     z-index: -1; /* Garante que o fundo fique atrás do conteúdo */

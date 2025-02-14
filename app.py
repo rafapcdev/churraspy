@@ -66,7 +66,7 @@ def calcular():
 
 @app.route("/desenvolvedores")
 def desenvolvedores():
-    return render_template("")
+    return render_template("desenvolvedores.html")
 
 if __name__ == "__main__":
     with app.app_context():
