@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossa Equipe</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='desenvolvedores.css')}}">
-</head>
-<body>
-    <div class="background"></div>
+{% extends "base.html" %}
+
+{% block title %} Desenvolvedores {% endblock %}
+{% block css %} 
+<link href="{{ url_for('static', filename='desenvolvedores.css') }}" rel="stylesheet">
+{% endblock %}
+{% block main %}
+
+<div class="background"></div>
     <div class="container">
         <h1 class="churras">Equipe ChurrasPy</h1>
         <div class="team">
@@ -97,5 +96,5 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+
+{% endblock %}
