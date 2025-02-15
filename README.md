@@ -1,23 +1,154 @@
-﻿﻿# Churraspy ![Static Badge](https://img.shields.io/badge/Status-em_desenvolvimento-orange)
+﻿﻿# Churraspy ![Static Badge](https://img.shields.io/badge/Status-Concluido-green)
 
 ## Índice :pushpin:
 
 * [Descrição](#descrição-books)
+* [Funcionalidades](#funcionalidades-do-projeto-hammer)
+* [Como rodar localmente](#como-rodar-localmente)
+* [Estrutura de diretorios](#estrutura-de-diretórios)
 * [Tecnologias utilizadas](#tecnologias-utilizadas-computer)
 * [Desenvolvedores](#desenvolvedores-construction_worker)
-* [Professor](#professor-raising_hand)
+* [Ideias novas features](#ideias-novas-features)
 * [Extra](#extra-mag_right)
 
 
 ## Descrição :books:
 
-É um projeto final do curso do qualifica maricá. O qual seus participantes decidiram por maioria, visa calcular o que será necessário para realizar um churrasco. Os dados dos alimentos e bebidas são oriundos de um webscrapping feito no site do supermercado princesa maricá e armazenados em um banco de dados. 
+É um projeto final do curso do qualifica maricá,  o qual seus participantes decidiram por maioria, visa calcular o que será necessário para realizar um churrasco. 
+Os dados dos alimentos e bebidas são oriundos de um webscrapping feito no site do supermercado princesa maricá e armazenados em um banco de dados local. 
+O projeto está configurado e rodando no servidor do python anywhere, para acessar <a href="https://matheuspc.pythonanywhere.com/"> clique aqui </a>
 
 ## Funcionalidades do projeto :hammer:
 
 - `Web Scrapping`: Pesquisa de preço no site do mercado
 - `Armazenamento de Dados`: Armazena os preços em um banco de dados, sendo possível um histórico de preços
 - `Orçamento`: Permite que o cliente selecione os itens desejados e gera um orçamento real, com base nos preços atuais
+
+## Como rodar localmente
+
+### Preparação do ambiente
+
+* Se tiver o git instalado no computador: vá no terminal do seu computador e digite o comando
+    ```{bash}
+    git clone https://github.com/matheus-costa-dev/churraspy
+    ```
+* Se não tiver o git instalado: no repositorio do github https://github.com/matheus-costa-dev/churraspy clique em code e aperte em download zip, clique com o botão direito e extraia o arquivo. Assim que terminar de extrair, renomeia para churraspy
+
+Ao final do processo entre na pasta churraspy
+
+### Passo a passo
+
+* Crie um ambiente virtual com o seguinte comando
+    ```{bash}
+    python -m venv env
+    ```
+* Ative o ambiente virtual com o comando
+    * Windowns: 
+        ```{bash}
+        env\scripts\activate
+        ```
+    * Linux e Mac:
+      ```{bash}
+      source env\bin\activate
+      ```
+* instale as bibliotecas necessárias
+    ```{bash}
+    pip install -r requirements.txt
+    ```
+* Execute o script app.py
+    ```{bash}
+    python3 app.py
+    ```
+    :warning:Obs: veja como ta instalado o python no seu computador, pode ser de outra forma como por exemplo <code> py app.py </code> ou <code> python app.py </code>
+
+ele irá rodar e criar um servidor local na sua maquina, no endereço **http://127.0.0.1:5000/**
+copie esse endereço e cole na url do seu navegador
+
+:red_circle: obs: se a pagina não houver dados quando clicar no card provavelmente é que o banco de dados esta desatualizado, para resolver
+
+* pare a execução do script app.py apertando Control + Z
+* execute o comando
+    ```{bash}
+    python3 rotina/atualizar_db.py
+    ```
+* Após terminar de atualizar, execute novamente o script app.py
+
+    ```{bash}
+    python3 app.py
+    ```
+
+## Estrutura de diretórios
+
+```
+churraspy/
+│
+├── .gitignore
+├── app.py
+├── README.md
+├── requirements.txt
+├── instance/
+│   ├── app.db
+│   └── Churrasquin.db
+├── py_scripts/
+│   ├── calculo_churras.py
+│   ├── SQL.py
+│   ├── SQL_session.py
+│   ├── utilidade.py
+│   ├── web_scrapping.py
+│   └── __init__.py
+├── rotas/
+│   ├── rotas.py
+│   └── __init__.py
+├── rotina/
+│   └── atualizar_db.py
+├── static/
+│   ├── script_index.js
+│   ├── script_resultado.js
+│   ├── style.css
+│   └── imgs/
+│       ├── 210707_small.gif
+│       ├── background-image.jpeg
+│       ├── churras.gif
+│       ├── foto.png
+│       ├── foto1.png
+│       ├── foto10.png
+│       ├── foto11.png
+│       ├── foto12.png
+│       ├── foto13.png
+│       ├── foto2.png
+│       ├── foto3.png
+│       ├── foto4.png
+│       ├── foto5.png
+│       ├── foto6.png
+│       ├── foto7.png
+│       ├── foto8.png
+│       ├── foto9.png
+│       ├── giphy.gif
+│       ├── instagram.svg
+│       └── logo.jpeg
+└── templates/
+    ├── base.html
+    ├── index.html
+    ├── resultado.html
+    └── pieces/
+        ├── buttons_controler.html
+        └── button_calcular_separate.html
+```
+
+* app.py: é o script principal onde irá executar o servidor
+* instance: é onde fica os bancos de dados, foram feitos 2, um para armazenar os dados dos preços e outro para o que a pessoa pediu no nosso site para calcular o churrasco
+* py_scripts: Fica armazenado os codigos python
+    * calculo_churras.py: Logica do calculo que será retornado para o usuário
+    * SQL.py: Armazena os dados obtidos do web_scrapping.py feito no site do supermercado princesa no banco de dados Churrasquin.db
+    * SQL_session.py: Armazena os dados do pedido do que irá usar no churrasco, é inserido no banco de dados app.db
+    * Utilidade.py: Script intermediário que traz os dados do script SQL e retorna em formato de dicionário
+    * web_scrapping.py: Obtem os dados do supermercado princesa através de um request, é o script mais crítico devido a possível alteração constante onde os dados são armazenados no seu site
+* rotas: Define as rotas que o site terá
+    * rotas.py: são definidos as rotas do nosso site e o que fará cada uma delas, lá atualmente tem 3 rotas index, calcular e resultado. index é a pagina inicial, o calcular é um endpoint que recebe os dados do que o usuário selecionou e redirecionar pra rota resultado
+* templates: Fica nossos codigos html de cada rota e o que terá, a base.html define o corpo do site e o index.html e resultado.html defini qual é o conteudo que o usuário terá a disposição, essas duas são extensões da base.html
+* static: Fica os arquivos css, js e imagens
+
+
 
 ## Tecnologias utilizadas :computer:
 
@@ -48,7 +179,6 @@
     </table>
 </div>
 
-
 ## Desenvolvedores :construction_worker:
 
 ### Back-End :wrench:
@@ -61,10 +191,11 @@
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/matheus-costa-dev" width=115><br><sub>Matheus Pereira Costa</sub>](https://github.com/matheus-costa-dev) | [<img loading="lazy" src="https://avatars.githubusercontent.com/Ju-Rodrigues22" width=115><br><sub>Juliana Rodrigues Ferreira</sub>](https://github.com/Ju-Rodrigues22) 
 | :---: | :---: | 
 
-### Professor :raising_hand:
+## Ideias novas features
 
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/matheus-costa-dev" width=115><br><sub>Matheus Pereira Costa</sub>](https://github.com/matheus-costa-dev)
-| :---: |
+1. O site pode conter uma nova rota chamada histórico no qual irá demonstra através de gráfico a variação de preço dos produtos
+2. Na pagina inicial do site o usuário poder selecionar a quantidade que quer de cada item ou ao menos dentro daquela seção ele considera mais importante pra comprar mais daquele produto específico do que de outro.
+
 
 ## Extra :mag_right:
 
