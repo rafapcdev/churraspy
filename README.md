@@ -1,4 +1,4 @@
-﻿﻿# Churraspy ![Static Badge](https://img.shields.io/badge/Status-Concluido-green)
+# Churraspy ![Static Badge](https://img.shields.io/badge/Status-Concluido-green)
 
 ## Índice :pushpin:
 
