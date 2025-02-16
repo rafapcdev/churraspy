@@ -36,7 +36,9 @@ def calculo_churrasco(pedidos):
 
         
         qtd_comprar = consumo_medio[tipo] * n_pessoas / df_tmp.shape[0]
-        qtd_comprar = qtd_comprar if qtd_comprar >= 1 else 1
+        if tipo in ("Cervejas", "Refrigerantes"):
+            qtd_comprar = ceil(qtd_comprar)
+
         df_tmp = df_tmp.assign(preco_final= lambda row: round(row["preco"] * qtd_comprar,2))
         df_tmp["qtd_comprar"] = round(qtd_comprar,2)
         preco_total = sum(df_tmp["preco_final"])
