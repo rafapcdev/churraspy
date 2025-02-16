@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Hugo Koppe",
+        "department": "WebScrapping",
+        "instagram": "https://www.instagram.com/hartuiqkoppe",
+        "image": "Hugo Koppe.png"
+    },
+    {
+        "name": "Ana Clara Motta",
+        "department": "Desenvolvedora Front-End",
+        "instagram": "https://www.instagram.com/motta_ana79",
+        "image": "Ana Clara Motta.png"
+    },
+    {
+        "name": "Leandro Araujo",
+        "department": "Desenvolvedor Front-End",
+        "instagram": "https://www.instagram.com/021_leandrofc",
+        "image": "Leandro Araujo.png"
+    },
+    {
+        "name": "Ana Julia Da Costa",
+        "department": "Desenvolvedora Front-End",
+        "instagram": "https://www.instagram.com/_anaajulia",
+        "image": "Ana Julia Da Costa.png"
+    },
+    {
+        "name": "Caroline Soares Vaz",
+        "department": "Desenvolvedora Back-End",
+        "instagram": "https://www.instagram.com/",
+        "image": "Caroline Soares Vaz.png"
+    },
+    {
+        "name": "Rodrigo Vieira",
+        "department": "Desenvolvedor Back-End",
+        "instagram": "https://www.instagram.com/rodrigo_vieira4107",
+        "image": "Rodrigo Vieira.png"
+    },
+    {
+        "name": "Davi Salvaya",
+        "department": "Desenvolvedor Back-End",
+        "instagram": "https://www.instagram.com/dsalvaya",
+        "image": "Davi Salvaya.png"
+    },
+    {
+        "name": "Denis Guimarães",
+        "department": "Desenvolvedor Back-End",
+        "instagram": "https://linkedin2.com/",
+        "image": "Denis Guimaraes.png"
+    },
+    {
+        "name": "Rafael Pereira",
+        "department": "WebScrapping",
+        "instagram": "https://www.instagram.com/ffaelcost",
+        "image": "Rafael Pereira.png"
+    },
+    {
+        "name": "Weslley Santiago",
+        "department": "Desenvolvedor Back-End",
+        "instagram": "https://www.instagram.com",
+        "image": "Weslley Santiago.png"
+    },
+    {
+        "name": "Juliana Rodrigues",
+        "department": "Desenvolvedor Front-End",
+        "instagram": "https://www.instagram.com/",
+        "image": "Juliana Rodrigues.png"
+    },
+    {
+        "name": "Tatiana Medeiros",
+        "department": "WebScrapping",
+        "instagram": "https://www.instagram.com/tatymedeiros05",
+        "image": "Tatiana Medeiros.png"
+    },
+    {
+        "name": "Alexandre Santos",
+        "department": "Product Manager",
+        "instagram": "https://www.instagram.com/ale.s.dias",
+        "image": "Alexandre Santos.png"
+    },
+    {
+        "name": "Matheus Pereira",
+        "department": "Tech Leader",
+        "instagram": "https://www.instagram.com/costa_matheus000",
+        "image": "Matheus Pereira.png"
+    }
+]

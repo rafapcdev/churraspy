@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask import request, render_template, redirect, url_for, jsonify
-from py_scripts.utilidade import get_and_clean_df
+from py_scripts.utilidade import get_and_clean_df, get_members
 from py_scripts.calculo_churras import calculo_churrasco
 from py_scripts.SQL_session import UserData, db
 
@@ -43,4 +43,5 @@ def calcular():
 
 @rotas_bp.route("/desenvolvedores")
 def desenvolvedores():
-    return render_template("desenvolvedores.html")
+    members = get_members()
+    return render_template("desenvolvedores.html", members = members)
