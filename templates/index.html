@@ -4,6 +4,16 @@
 {% block main %}
 
 <main class="d-flex flex-column justify-content-center m-0 p-0">
+    {% if df_dict["Cervejas"].empty %}
+
+    <div class="container text-center p-0 bg-custom">
+
+        <h1 class="text-danger">O banco de dados está desatualizado, por favor contate o desenvolvedor</h1>
+        
+    </div>
+</div>
+    {% else %}
+
     {% include "pieces/button_calcular_separate.html" %}
     
     <div class="container text-center p-0">
@@ -59,6 +69,7 @@
         <!-- fim cartao {{key}} -->
         {% endfor %}
     </div>
+    {% endif %}
 </main>
 
 {% endblock %}

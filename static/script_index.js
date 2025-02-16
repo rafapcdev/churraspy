@@ -111,4 +111,14 @@ function enviarDados(data) {
     .catch(error => console.error('Error:', error));
 }
 
+function copyCode() {
+    var code = document.getElementById("code").innerText;
+    var textarea = document.createElement("textarea");
+    textarea.value = code;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+}
+
 card_selected()

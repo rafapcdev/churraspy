@@ -4,7 +4,7 @@ from py_scripts.utilidade import get_and_clean_df, get_members
 from py_scripts.calculo_churras import calculo_churrasco
 from py_scripts.SQL_session import UserData, db
 
-rotas_bp = Blueprint("rotas", __name__)
+rotas_bp = Blueprint("churras", __name__)
 
 # Rotas
 @rotas_bp.route("/", methods=["GET"])
@@ -24,7 +24,7 @@ def resultado():
         if data["Bovinos"] or data["Aves"] or data["Guarnições"] or data["Refrigerantes"] or data["Cervejas"]:
             return render_template("resultado.html", data=data)
     
-    return redirect(url_for("rotas.index"))
+    return redirect(url_for("churras.index"))
 
 @rotas_bp.route("/calcular", methods=["POST"])
 def calcular(): 
@@ -39,7 +39,7 @@ def calcular():
     user_data.data = request.get_json()
     db.session.commit()  # Salva as alterações no banco de dados
 
-    return jsonify({"url": url_for("rotas.resultado")})
+    return jsonify({"url": url_for("churras.resultado")})
 
 @rotas_bp.route("/desenvolvedores")
 def desenvolvedores():

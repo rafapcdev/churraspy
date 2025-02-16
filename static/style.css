@@ -10,7 +10,7 @@ body {
     background-image: url("imgs/background-image.jpeg");
     background-size: cover;
     background-position: center;
-    color: rgb(51, 255, 10);
+    color: rgb(0,0,0);
 }
 
 body::before {

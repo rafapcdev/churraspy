@@ -69,7 +69,7 @@ copie esse endereço e cole na url do seu navegador
 * pare a execução do script app.py apertando Control + Z
 * execute o comando
     ```{bash}
-    python3 rotina/atualizar_db.py
+    python3 routines/atualizar_db.py
     ```
 * Após terminar de atualizar, execute novamente o script app.py
 
@@ -96,10 +96,10 @@ churraspy/
 │   ├── utilidade.py
 │   ├── web_scrapping.py
 │   └── __init__.py
-├── rotas/
-│   ├── rotas.py
+├── routes/
+│   ├── churras.py
 │   └── __init__.py
-├── rotina/
+├── routines/
 │   └── atualizar_db.py
 ├── static/
 │   ├── script_index.js
@@ -109,20 +109,20 @@ churraspy/
 │       ├── 210707_small.gif
 │       ├── background-image.jpeg
 │       ├── churras.gif
-│       ├── foto.png
-│       ├── foto1.png
-│       ├── foto10.png
-│       ├── foto11.png
-│       ├── foto12.png
-│       ├── foto13.png
-│       ├── foto2.png
-│       ├── foto3.png
-│       ├── foto4.png
-│       ├── foto5.png
-│       ├── foto6.png
-│       ├── foto7.png
-│       ├── foto8.png
-│       ├── foto9.png
+│       ├── Alexandre Santos.png
+│       ├── Ana Clara Motta.png
+│       ├── Ana Julia Da Costa.png
+│       ├── Caroline Soares Vaz.png
+│       ├── Davi Salvaya.png
+│       ├── Denis Guimaraes.png
+│       ├── Hugo Koppe.png
+│       ├── Juliana Rodrigues.png
+│       ├── Leandro Araujo.png
+│       ├── Matheus Pereira.png
+│       ├── Rafael Pereira.png
+│       ├── Rodrigo Vieira.png
+│       ├── Tatiana Medeiros.png
+│       ├── Weslley Santiago.png
 │       ├── giphy.gif
 │       ├── instagram.svg
 │       └── logo.jpeg
@@ -143,8 +143,10 @@ churraspy/
     * SQL_session.py: Armazena os dados do pedido do que irá usar no churrasco, é inserido no banco de dados app.db
     * Utilidade.py: Script intermediário que traz os dados do script SQL e retorna em formato de dicionário
     * web_scrapping.py: Obtem os dados do supermercado princesa através de um request, é o script mais crítico devido a possível alteração constante onde os dados são armazenados no seu site
-* rotas: Define as rotas que o site terá
+* routes: Define as rotas que o site terá
     * rotas.py: são definidos as rotas do nosso site e o que fará cada uma delas, lá atualmente tem 3 rotas index, calcular e resultado. index é a pagina inicial, o calcular é um endpoint que recebe os dados do que o usuário selecionou e redirecionar pra rota resultado
+* routines: Rotinas isoladas que devem ocorrer paralelo ao site
+    * atualizar_db.py: Atualiza o banco de dados dos preços dos produtos, deve ser rodado em um agendador de tarefas do windows ou crontab do linux, de forma isolada pode ser rodado manualmente.
 * templates: Fica nossos codigos html de cada rota e o que terá, a base.html define o corpo do site e o index.html e resultado.html defini qual é o conteudo que o usuário terá a disposição, essas duas são extensões da base.html
 * static: Fica os arquivos css, js e imagens
 

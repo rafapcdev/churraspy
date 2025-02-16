@@ -19,7 +19,11 @@ def tabela_hoje():
 
 def deletar_hoje():
     conn = connect(db_path)
-    df_sql = read_sql(f"select * from Produtos", conn)
+    cursor = conn.cursor()
+    cursor.execute(f"delete from Produtos where data_extracao = '{hoje}' ")
+    conn.commit()
+    cursor.close()
+    conn.close()
 
 def atualizar():
     conn = connect(db_path)

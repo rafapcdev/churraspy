@@ -1,5 +1,5 @@
 from flask import Flask
-from rotas.rotas import rotas_bp
+from routes.churras import rotas_bp
 from flask_cors import CORS
 
 # Inicialização do Flask

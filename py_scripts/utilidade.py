@@ -18,7 +18,7 @@ def filtrar_lt_ml(row) -> bool:
 
 
 
-def get_and_clean_df(preco_Final_str:bool) -> dict:
+def get_and_clean_df(preco_Final_str:bool = False) -> dict:
     filterwarnings('ignore', category=SettingWithCopyWarning)
 
 
