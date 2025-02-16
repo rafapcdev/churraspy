@@ -8,7 +8,7 @@
 * [Estrutura de diretorios](#estrutura-de-diretórios)
 * [Tecnologias utilizadas](#tecnologias-utilizadas-computer)
 * [Desenvolvedores](#desenvolvedores-construction_worker)
-* [Ideias novas features](#ideias-novas-features)
+* [Ideias de novas features](#ideias-novas-features)
 * [Extra](#extra-mag_right)
 
 
@@ -83,9 +83,10 @@ copie esse endereço e cole na url do seu navegador
 churraspy/
 │
 ├── .gitignore
-├── app.py
 ├── README.md
 ├── requirements.txt
+├── members.json
+├── app.py
 ├── instance/
 │   ├── app.db
 │   └── Churrasquin.db
@@ -135,9 +136,11 @@ churraspy/
         └── button_calcular_separate.html
 ```
 
-* app.py: é o script principal onde irá executar o servidor
-* instance: é onde fica os bancos de dados, foram feitos 2, um para armazenar os dados dos preços e outro para o que a pessoa pediu no nosso site para calcular o churrasco
-* py_scripts: Fica armazenado os codigos python
+* requirements.txt: Arquivo que informa quais bibliotecas são necessárias pra rodar essa aplicação
+* members.json: Arquivo onde as informações dos seus desenvolvedores estão armazenadas.
+* app.py: é o script principal onde irá executar o servidor.
+* instance: é onde fica os bancos de dados, foram feitos 2, um para armazenar os dados dos preços e outro para o que a pessoa pediu no nosso site para calcular o churrasco.
+* py_scripts: Fica armazenado os codigos python.
     * calculo_churras.py: Logica do calculo que será retornado para o usuário
     * SQL.py: Armazena os dados obtidos do web_scrapping.py feito no site do supermercado princesa no banco de dados Churrasquin.db
     * SQL_session.py: Armazena os dados do pedido do que irá usar no churrasco, é inserido no banco de dados app.db
@@ -149,8 +152,6 @@ churraspy/
     * atualizar_db.py: Atualiza o banco de dados dos preços dos produtos, deve ser rodado em um agendador de tarefas do windows ou crontab do linux, de forma isolada pode ser rodado manualmente.
 * templates: Fica nossos codigos html de cada rota e o que terá, a base.html define o corpo do site e o index.html e resultado.html defini qual é o conteudo que o usuário terá a disposição, essas duas são extensões da base.html
 * static: Fica os arquivos css, js e imagens
-
-
 
 ## Tecnologias utilizadas :computer:
 
@@ -193,7 +194,7 @@ churraspy/
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/matheus-costa-dev" width=115><br><sub>Matheus Pereira Costa</sub>](https://github.com/matheus-costa-dev) | [<img loading="lazy" src="https://avatars.githubusercontent.com/Ju-Rodrigues22" width=115><br><sub>Juliana Rodrigues Ferreira</sub>](https://github.com/Ju-Rodrigues22) 
 | :---: | :---: | 
 
-## Ideias novas features
+## Ideias de novas features
 
 1. O site pode conter uma nova rota chamada histórico no qual irá demonstra através de gráfico a variação de preço dos produtos
 2. Na pagina inicial do site o usuário poder selecionar a quantidade que quer de cada item ou ao menos dentro daquela seção ele considera mais importante pra comprar mais daquele produto específico do que de outro.
