@@ -3,10 +3,7 @@ from pandas import read_sql, concat
 from sqlite3 import connect
 from datetime import datetime
 from pytz import timezone
-import os
-
-base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-db_path = os.path.join(base_dir,"instance" ,'Churrasquin.db')
+from py_scripts import db_path
 
 hoje = datetime.now(timezone('America/Sao_Paulo')).date().strftime('%d/%m/%Y')
 

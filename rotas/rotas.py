@@ -43,5 +43,5 @@ def calcular():
 
 @rotas_bp.route("/desenvolvedores")
 def desenvolvedores():
-    members = get_members()
+    members = get_members("members.json")
     return render_template("desenvolvedores.html", members = members)

@@ -4,6 +4,7 @@ from pandas.errors import SettingWithCopyWarning
 from warnings import filterwarnings
 from re import search
 from json import loads
+from py_scripts import members_path
 
 # Silenciar todos os avisos do pandas
 
@@ -22,9 +23,7 @@ def get_and_clean_df(preco_Final_str:bool) -> dict:
 
 
     df_carnes = concat([carnes_bovinas(),aves()], axis=0)
-    #df_bebidas = concat([ refrigerante() ,cervejas()], axis=0)
     df_guarnicoes = concat([ churrasco_e_cia() , frios()], axis=0)
-    #df_carnes['nome'] = df_carnes['nome'].str.replace('kg|peça inteira', '', regex=True).str.strip()
 
     df_dict = {key.replace(" ", "-"):df_carnes.loc[df_carnes["tipo"] == key] for key in df_carnes["tipo"].unique().tolist()}
     df_dict["Guarnições"] = df_guarnicoes
@@ -46,7 +45,7 @@ def get_and_clean_df(preco_Final_str:bool) -> dict:
 
 def get_members() -> DataFrame:
 
-    with open("members.json", "r") as file:
+    with open(members_path, "r") as file:
         members = loads(file.read())
 
     df = DataFrame(members)
