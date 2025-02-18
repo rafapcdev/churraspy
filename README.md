@@ -186,13 +186,13 @@ churraspy/
 
 ### Back-End :wrench:
 
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/matheus-costa-dev" width=115><br><sub>Matheus Pereira Costa</sub>](https://github.com/matheus-costa-dev) | [<img loading="lazy" src="https://avatars.githubusercontent.com/hugokoppe" width=115><br><sub>Hugo Koppe</sub>](https://github.com/hugokoppe) | [<img loading="lazy" src="https://avatars.githubusercontent.com/dvsalvaya" width=115><br><sub>Davi salvaya</sub>](https://github.com/dvsalvaya)  | [<img loading="lazy" src="https://avatars.githubusercontent.com/Rodrigo-Avieira" width=115><br><sub>Rodrigo Vieira</sub>](https://github.com/Rodrigo-Avieira) 
-| :---: | :---: | :---: | :---: | 
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/matheus-costa-dev" width=115><br><sub>Matheus Pereira Costa</sub>](https://github.com/matheus-costa-dev) | [<img loading="lazy" src="https://avatars.githubusercontent.com/hugokoppe" width=115><br><sub>Hugo Koppe</sub>](https://github.com/hugokoppe) | [<img loading="lazy" src="https://avatars.githubusercontent.com/dvsalvaya" width=115><br><sub>Davi salvaya</sub>](https://github.com/dvsalvaya) | [<img loading="lazy" src="https://avatars.githubusercontent.com/Rodrigo-Avieira" width=115><br><sub>Rodrigo Vieira</sub>](https://github.com/Rodrigo-Avieira) | [<img loading="lazy" src="https://avatars.githubusercontent.com/carolinesvazz" width=115><br><sub>Caroline Vazz</sub>](https://github.com/carolinesvazz) |
+| :---: | :---: | :---: | :---: | :---: |
 
 ### Front-End :art:
 
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/matheus-costa-dev" width=115><br><sub>Matheus Pereira Costa</sub>](https://github.com/matheus-costa-dev) | [<img loading="lazy" src="https://avatars.githubusercontent.com/Ju-Rodrigues22" width=115><br><sub>Juliana Rodrigues Ferreira</sub>](https://github.com/Ju-Rodrigues22) 
-| :---: | :---: | 
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/matheus-costa-dev" width=115><br><sub>Matheus Pereira Costa</sub>](https://github.com/matheus-costa-dev) | [<img loading="lazy" src="https://avatars.githubusercontent.com/Ju-Rodrigues22" width=115><br><sub>Juliana Rodrigues Ferreira</sub>](https://github.com/Ju-Rodrigues22) |
+| :---: | :---: |
 
 ## Ideias de novas features
 
@@ -203,4 +203,4 @@ churraspy/
 ## Extra :mag_right:
 
 - Para aprender sobre como montar um readme.md <a href="https://www.alura.com.br/artigos/escrever-bom-readme">Clique aqui</a>
-- Para gerar os icones das tecnologias utilizadas <a href="https://marwin1991.github.io/profile-technology-icons/">Clique aqui</a> 
+- Para gerar os icones das tecnologias utilizadas <a href="https://marwin1991.github.io/profile-technology-icons/">Clique aqui</a>
