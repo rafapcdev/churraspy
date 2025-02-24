@@ -204,3 +204,4 @@ churraspy/
 
 - Para aprender sobre como montar um readme.md <a href="https://www.alura.com.br/artigos/escrever-bom-readme">Clique aqui</a>
 - Para gerar os icones das tecnologias utilizadas <a href="https://marwin1991.github.io/profile-technology-icons/">Clique aqui</a>
+
