@@ -31,7 +31,7 @@ jobs:
       run: |
         git config --global user.name 'Matheus Costa'
         git config --global user.email 'dev.matheuspc@gmail.com'
-        git add Churrasquin.db
+        git add instance/Churrasquin.db
         git commit -m 'Update database with new data'
         git push
       env:
