@@ -3,73 +3,69 @@
 {% block title %} ChurrasPY {% endblock %}
 {% block main %}
 
-<main class="d-flex flex-column justify-content-center m-0 p-0">
-    {% if df_dict["Cervejas"].empty %}
+<main class="d-flex flex-column justify-content-center m-0 p-0 overflow-auto">
 
-    <div class="container text-center p-0 bg-custom">
 
-        <h1 class="text-danger">O banco de dados está desatualizado, por favor contate o desenvolvedor</h1>
-        
-    </div>
-</div>
-    {% else %}
-
-    {% include "pieces/button_calcular_separate.html" %}
-    
     <div class="container text-center p-0">
         <div class="row g-2">
             <div class="col-12 col-md-4 col-lg-2">
-                <input checked class="btn-check" id="btnradiogeral" name="btnradio" onclick="card_selected()" type="radio">
-                <label class="btn btn-outline-secondary w-100 bg-custom fs-6 fs-md-5 fs-lg-4" for="btnradiogeral">geral</label>
+                <input checked class="btn-check" id="btnradiogeral" name="btnradio" onclick="card_selected()"
+                    type="radio">
+                <label class="btn btn-outline-secondary w-100 bg-custom fs-6 fs-md-5 fs-lg-4"
+                    for="btnradiogeral">geral</label>
             </div>
             {% for key in df_dict.keys() %}
             <div class="col-12 col-md-4 col-lg-2">
                 <input class="btn-check" id="btnradio{{key}}" name="btnradio" onclick="card_selected()" type="radio">
-                <label class="btn btn-outline-secondary w-100 bg-custom fs-6 fs-md-5 fs-lg-4" for="btnradio{{key}}">{{key}}</label>
+                <label class="btn btn-outline-secondary w-100 bg-custom fs-6 fs-md-5 fs-lg-4"
+                    for="btnradio{{key}}">{{key}}</label>
             </div>
             {% endfor %}
         </div>
     </div>
-    
 
-    <div class="container mt-3">
+
+    <div class="container mt-3 overflow-auto h-100">
         <!-- inicio cartao geral-->
-        <div class="card text-center text-light" id="card-geral">
-            <div class="card-body custom-color">
-                <div class="card-text" id="geral" options>
-                    <div class="row">
+        <div class="card text-center text-light h-100" id="card-geral">
+            <div class="card-body custom-color d-flex justify-content-center align-items-center">
+                <div class="card-text w-100 " id="geral" options>
+                    <div class="row ">
                         <label class="form-label fs-6 fs-md-5 fs-lg-4" for="n_clients">Quantidade de pessoas</label>
                         <span class="fs-6 fs-md-5 fs-lg-4" id="rangeValue">50</span>
-                        <input class="form-range" id="n_clients" name="n_clients" oninput="update_value_range(this)" type="range" min="1" max="100">
+                        <input class="form-range" id="n_clients" name="n_clients" oninput="update_value_range(this)"
+                            type="range" min="1" max="100">
                     </div>
                 </div>
-                {% include "pieces/buttons_controler.html" %}
             </div>
         </div>
         <!-- fim cartao geral -->
 
         {% for key, df in df_dict.items() %}
-        <!-- inicio cartao {{key}} -->
         <div class="card text-center mt-3" hidden id="card-{{key}}">
             <div class="card-body">
                 <div class="card-text row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2" id="{{key}}" options>
                     {% for _, row in df.iterrows() %}
                     <div class="col">
-                        <button class="btn w-100 d-flex flex-column align-items-center fs-6 fs-md-5 fs-lg-4" onclick="selected(this)">
-                            <img src="{{row['url_imagem']}}" class="img-fluid mb-2" width="30px" height="30px"> 
-                            <span>{{row["nome"]}}</span> 
-                            <p>R$ {{row["preco_final"]}}</p>
+                        <button class="btn w-100 h-100 d-flex flex-column align-items-center fs-6 fs-md-5 fs-lg-4"
+                            onclick="selected(this)">
+                            <img src="{{row['url_imagem']}}" class="img-fluid mb-2" width="10%" height="10%">
+                            <span class="fs-5">{{row["nome"]}}</span>
+                            <span class="fs-6 fw-bold">R$ {{row["preco_final"]}}</span>
                         </button>
                     </div>
                     {% endfor %}
                 </div>
-                {% include "pieces/buttons_controler.html" %}
             </div>
         </div>
-        <!-- fim cartao {{key}} -->
         {% endfor %}
     </div>
-    {% endif %}
+
+    <div class="container">
+
+        {% include "pieces/buttons_controler.html" %}
+    </div>
+
 </main>
 
 {% endblock %}

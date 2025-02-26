@@ -24,9 +24,6 @@ body::before {
     z-index: -1;
 }
 
-main {
-    flex: 1;
-}
 
 .card-text .btn, .custom-color, .card-text .btn {
     color: white !important;
@@ -63,6 +60,10 @@ label:hover{
 
 .navbar-nav {
     margin-left: auto;
+}
+
+main {
+    flex: 1;
 }
 
 /* Novo código para fixar o footer */
