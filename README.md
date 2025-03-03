@@ -2,7 +2,7 @@
 
 [![Estrelas](https://img.shields.io/github/stars/matheus-costa-dev/churraspy?style=social)](https://github.com/matheus-costa-dev/churraspy/stargazers) [![Contribuidores](https://img.shields.io/github/contributors/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy/graphs/contributors) [![Tamanho do Repositório](https://img.shields.io/github/repo-size/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy) [![Linguagens](https://img.shields.io/github/languages/top/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy)  
 [![Último Commit](https://img.shields.io/github/last-commit/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy/commits/main) [![Issues](https://img.shields.io/github/issues/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy/issues) 
-[![License](https://img.shields.io/github/license/matheus-costa-dev/churraspy?cache=refresh)](https://github.com/matheus-costa-dev/churraspy/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy/blob/main/LICENSE)
 
 
 ## Índice :pushpin:
