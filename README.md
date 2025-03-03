@@ -7,14 +7,18 @@
 
 ## Índice :pushpin:
 
-* [Descrição](#descrição-books)
-* [Funcionalidades](#funcionalidades-do-projeto-hammer)
-* [Como rodar localmente](#como-rodar-localmente-desktop-computer)
-* [Estrutura de diretorios](#estrutura-de-diretórios)
-* [Tecnologias utilizadas](#tecnologias-utilizadas-computer)
-* [Desenvolvedores](#desenvolvedores-construction_worker)
-* [Ideias de novas features](#ideias-novas-features)
-* [Extra](#extra-mag_right)
+- [Descrição](#descrição-books)
+- [Funcionalidades](#funcionalidades-do-projeto-hammer)
+- [Como rodar localmente](#como-rodar-localmente-desktop-computer)
+    - [Preparação do ambiente](#preparação-do-ambiente-shell)
+    - [Passo a passo](#passo-a-passo-walking)
+- [Principais arquivos e pastas](#principais-arquivos-e-pastas-file-folder)
+- [Tecnologias utilizadas](#tecnologias-utilizadas-computer)
+- [Desenvolvedores](#desenvolvedores-construction_worker)
+- [Ideias de novas features](#ideias-de-novas-features-sparkles)
+- [Como contribuir](#como-contribuir-handshake)
+- [Links](#links-globe_with_meridians)
+
 
 
 ## Descrição :books:
@@ -29,9 +33,9 @@ O projeto está configurado e rodando no servidor do python anywhere, para acess
 - `Armazenamento de Dados`: Armazena os preços em um banco de dados, sendo possível um histórico de preços
 - `Orçamento`: Permite que o cliente selecione os itens desejados e gera um orçamento real, com base nos preços atuais
 
-## Como rodar localmente 🖥️
+## Como rodar localmente :desktop-computer:
 
-### Preparação do ambiente 🐚
+### Preparação do ambiente :shell:
 
 * Se tiver o git instalado no computador: vá no terminal do seu computador e digite o comando
     ```{bash}
@@ -41,7 +45,7 @@ O projeto está configurado e rodando no servidor do python anywhere, para acess
 
 Ao final do processo entre na pasta churraspy
 
-### Passo a passo
+### Passo a passo :walking: 
 
 * Crie um ambiente virtual com o seguinte comando
     ```{bash}
@@ -69,20 +73,7 @@ Ao final do processo entre na pasta churraspy
 ele irá rodar e criar um servidor local na sua maquina, no endereço **http://127.0.0.1:5000/**
 copie esse endereço e cole na url do seu navegador
 
-:red_circle: obs: se a pagina não houver dados quando clicar no card provavelmente é que o banco de dados esta desatualizado, para resolver
-
-* pare a execução do script app.py apertando Control + Z
-* execute o comando
-    ```{bash}
-    python3 routines/atualizar_db.py
-    ```
-* Após terminar de atualizar, execute novamente o script app.py
-
-    ```{bash}
-    python3 app.py
-    ```
-
-## Principais arquivos e pastas 📁
+## Principais arquivos e pastas :file-folder:
 
 * requirements.txt: Arquivo que informa quais bibliotecas são necessárias pra rodar essa aplicação
 * members.json: Arquivo onde as informações dos seus desenvolvedores estão armazenadas.
@@ -142,14 +133,34 @@ copie esse endereço e cole na url do seu navegador
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/matheus-costa-dev" width=115><br><sub>Matheus Pereira Costa</sub>](https://github.com/matheus-costa-dev) | [<img loading="lazy" src="https://avatars.githubusercontent.com/Ju-Rodrigues22" width=115><br><sub>Juliana Rodrigues Ferreira</sub>](https://github.com/Ju-Rodrigues22) |
 | :---: | :---: |
 
-## Ideias de novas features
+## Ideias de novas features :sparkles:
 
 1. O site pode conter uma nova rota chamada histórico no qual irá demonstra através de gráfico a variação de preço dos produtos
 2. Na pagina inicial do site o usuário poder selecionar a quantidade que quer de cada item ou ao menos dentro daquela seção ele considera mais importante pra comprar mais daquele produto específico do que de outro.
+3. Criar um relatorio dinâmico estilo power bi so que no python, exemplo com bibliotecas Taipy 
 
+## Como Contribuir :handshake:
 
-## Extra :mag_right:
+Se você deseja contribuir para o projeto, siga os passos abaixo:
 
-- Para aprender sobre como montar um readme.md <a href="https://www.alura.com.br/artigos/escrever-bom-readme">Clique aqui</a>
-- Para gerar os icones das tecnologias utilizadas <a href="https://marwin1991.github.io/profile-technology-icons/">Clique aqui</a>
+1. **Fork o repositório** clicando no botão "Fork" no topo da página.
+2. **Crie uma branch** para sua modificação:
+   ```bash
+   git checkout -b feature/minha-nova-funcionalidade
+   ```
+3. **Realize as alterações** no código e faça o commit das mudanças:
+   ```bash
+   git commit -am 'Adicionando nova funcionalidade'
+   ```
+4. **Envie suas mudanças** para o repositório remoto:
+   ```bash
+   git push origin feature/minha-nova-funcionalidade
+   ```
+5. **Abra um Pull Request** para discutir e revisar suas alterações.
+
+## Links :globe_with_meridians:
+
+- [Aplicação ao vivo](https://matheuspc.pythonanywhere.com/)
+- [Montar Readme.md](https://www.alura.com.br/artigos/escrever-bom-readme)
+- [Gerar icones](https://marwin1991.github.io/profile-technology-icons/)
 
