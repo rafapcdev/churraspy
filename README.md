@@ -9,7 +9,7 @@
 
 * [Descrição](#descrição-books)
 * [Funcionalidades](#funcionalidades-do-projeto-hammer)
-* [Como rodar localmente](#como-rodar-localmente)
+* [Como rodar localmente](#como-rodar-localmente-desktop-computer)
 * [Estrutura de diretorios](#estrutura-de-diretórios)
 * [Tecnologias utilizadas](#tecnologias-utilizadas-computer)
 * [Desenvolvedores](#desenvolvedores-construction_worker)
@@ -29,9 +29,9 @@ O projeto está configurado e rodando no servidor do python anywhere, para acess
 - `Armazenamento de Dados`: Armazena os preços em um banco de dados, sendo possível um histórico de preços
 - `Orçamento`: Permite que o cliente selecione os itens desejados e gera um orçamento real, com base nos preços atuais
 
-## Como rodar localmente
+## Como rodar localmente 🖥️
 
-### Preparação do ambiente
+### Preparação do ambiente 🐚
 
 * Se tiver o git instalado no computador: vá no terminal do seu computador e digite o comando
     ```{bash}
@@ -82,64 +82,7 @@ copie esse endereço e cole na url do seu navegador
     python3 app.py
     ```
 
-## Estrutura de diretórios
-
-```
-churraspy/
-│
-├── .gitignore
-├── README.md
-├── requirements.txt
-├── members.json
-├── app.py
-├── instance/
-│   ├── app.db
-│   └── Churrasquin.db
-├── py_scripts/
-│   ├── calculo_churras.py
-│   ├── SQL.py
-│   ├── SQL_session.py
-│   ├── utilidade.py
-│   ├── web_scrapping.py
-│   └── __init__.py
-├── routes/
-│   ├── churras.py
-│   └── __init__.py
-├── routines/
-│   └── atualizar_db.py
-├── static/
-│   ├── script_index.js
-│   ├── script_resultado.js
-│   ├── style.css
-│   └── imgs/
-│       ├── 210707_small.gif
-│       ├── background-image.jpeg
-│       ├── churras.gif
-│       ├── Alexandre Santos.png
-│       ├── Ana Clara Motta.png
-│       ├── Ana Julia Da Costa.png
-│       ├── Caroline Soares Vaz.png
-│       ├── Davi Salvaya.png
-│       ├── Denis Guimaraes.png
-│       ├── Hugo Koppe.png
-│       ├── Juliana Rodrigues.png
-│       ├── Leandro Araujo.png
-│       ├── Matheus Pereira.png
-│       ├── Rafael Pereira.png
-│       ├── Rodrigo Vieira.png
-│       ├── Tatiana Medeiros.png
-│       ├── Weslley Santiago.png
-│       ├── giphy.gif
-│       ├── instagram.svg
-│       └── logo.jpeg
-└── templates/
-    ├── base.html
-    ├── index.html
-    ├── resultado.html
-    └── pieces/
-        ├── buttons_controler.html
-        └── button_calcular_separate.html
-```
+## Principais arquivos e pastas 📁
 
 * requirements.txt: Arquivo que informa quais bibliotecas são necessárias pra rodar essa aplicação
 * members.json: Arquivo onde as informações dos seus desenvolvedores estão armazenadas.
