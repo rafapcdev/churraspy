@@ -4,7 +4,6 @@
 [![Último Commit](https://img.shields.io/github/last-commit/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy/commits/main) [![Issues](https://img.shields.io/github/issues/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy/issues) 
 [![License](https://img.shields.io/github/license/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy/blob/main/LICENSE)
 
-
 ## Índice :pushpin:
 
 - [Descrição](#descrição-books)
@@ -19,13 +18,9 @@
 - [Como contribuir](#como-contribuir-handshake)
 - [Links](#links-globe_with_meridians)
 
-
-
 ## Descrição :books:
 
-É um projeto final do curso do qualifica maricá,  o qual seus participantes decidiram por maioria, visa calcular o que será necessário para realizar um churrasco. 
-Os dados dos alimentos e bebidas são oriundos de um webscrapping feito no site do supermercado princesa maricá e armazenados em um banco de dados local. 
-O projeto está configurado e rodando no servidor do python anywhere, para acessar <a href="https://matheuspc.pythonanywhere.com/"> clique aqui </a>
+Aplicação feita em python que visa calcular o que será necessário para realizar um churrasco. Os dados dos alimentos e bebidas são obtidos de um webscrapping feito no site do supermercado princesa maricá e armazenados no banco de dados sqlite. O projeto está configurado e rodando no servidor do python anywhere, para acessar <a href="https://matheuspc.pythonanywhere.com/"> clique aqui </a>
 
 ## Funcionalidades do projeto :hammer:
 
