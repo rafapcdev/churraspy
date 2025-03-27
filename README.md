@@ -4,6 +4,10 @@
 [![Último Commit](https://img.shields.io/github/last-commit/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy/commits/main) [![Issues](https://img.shields.io/github/issues/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy/issues) 
 [![License](https://img.shields.io/github/license/matheus-costa-dev/churraspy)](https://github.com/matheus-costa-dev/churraspy/blob/main/LICENSE)
 
+## Demonstração
+
+https://github.com/user-attachments/assets/a110362d-3312-494e-8286-20487b708ab6
+
 ## Índice :pushpin:
 
 - [Descrição](#descrição-books)
